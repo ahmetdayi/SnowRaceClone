@@ -41,26 +41,26 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Asset Store\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
-     <Compile Include="Assets\Asset Store\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
-     <Compile Include="Assets\Asset Store\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
-     <Compile Include="Assets\Asset Store\Joystick Pack\Scripts\Base\Joystick.cs" />
-     <Compile Include="Assets\Asset Store\Joystick Pack\Examples\JoystickPlayerExample.cs" />
-     <Compile Include="Assets\Asset Store\Joystick Pack\Examples\JoystickSetterExample.cs" />
-     <Compile Include="Assets\Asset Store\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
-     <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonAnimator.cs" />
-     <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vComment.cs" />
-     <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonInput.cs" />
      <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonMotor.cs" />
-     <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonController.cs" />
-     <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vPickupItem.cs" />
-     <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\3D Models\Others\HealthItem\vAnimateUV.cs" />
-     <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vExtensions.cs" />
-     <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\Scripts\Camera\vThirdPersonCamera.cs" />
-     <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\RoadCubeController.cs" />
-     <Compile Include="Assets\Scripts\SnowBallController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Asset Store\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+     <Compile Include="Assets\Asset Store\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\3D Models\Others\HealthItem\vAnimateUV.cs" />
+     <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vComment.cs" />
+     <Compile Include="Assets\Scripts\SnowBallController.cs" />
+     <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonAnimator.cs" />
+     <Compile Include="Assets\Scripts\vThirdPersonInput.cs" />
+     <Compile Include="Assets\Asset Store\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+     <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vPickupItem.cs" />
+     <Compile Include="Assets\Asset Store\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
+     <Compile Include="Assets\Asset Store\Joystick Pack\Scripts\Base\Joystick.cs" />
+     <Compile Include="Assets\Asset Store\Joystick Pack\Examples\JoystickSetterExample.cs" />
+     <Compile Include="Assets\Scripts\RoadCubeController.cs" />
+     <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\Scripts\CharacterController\vThirdPersonController.cs" />
+     <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\Scripts\Generic\Utils\vExtensions.cs" />
+     <Compile Include="Assets\Asset Store\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+     <Compile Include="Assets\Asset Store\Invector-3rdPersonController_LITE\Scripts\Camera\vThirdPersonCamera.cs" />
      <None Include="Assets\Asset Store\Invector-3rdPersonController_LITE\README_Basic.txt" />
      <Reference Include="UnityEngine">
      <HintPath>D:\UnityHubEditor\2021.3.7f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -305,20 +305,20 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>D:\UnityHubEditor\2021.3.7f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
+     <Reference Include="DOTween">
+     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="clipper_library">
+     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\PackageCache\com.unity.cinemachine@2.8.6\Runtime\ThirdParty\clipper_library.dll</HintPath>
      </Reference>
      <Reference Include="ReportGeneratorMerged">
      <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
      <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-     </Reference>
-     <Reference Include="clipper_library">
-     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\PackageCache\com.unity.cinemachine@2.8.6\Runtime\ThirdParty\clipper_library.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween">
-     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>D:\UnityHubEditor\2021.3.7f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -746,8 +746,14 @@
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Cinemachine">
+     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
      <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     </Reference>
+     <Reference Include="com.unity.cinemachine.editor">
+     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
      <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
@@ -763,12 +769,6 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-     </Reference>
-     <Reference Include="com.unity.cinemachine.editor">
-     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Cinemachine">
-     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

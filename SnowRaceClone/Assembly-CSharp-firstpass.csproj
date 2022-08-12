@@ -42,13 +42,13 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
      <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
      <Reference Include="UnityEngine">
      <HintPath>D:\UnityHubEditor\2021.3.7f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -293,20 +293,20 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>D:\UnityHubEditor\2021.3.7f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
+     <Reference Include="DOTween">
+     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="clipper_library">
+     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\PackageCache\com.unity.cinemachine@2.8.6\Runtime\ThirdParty\clipper_library.dll</HintPath>
      </Reference>
      <Reference Include="ReportGeneratorMerged">
      <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
      <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-     </Reference>
-     <Reference Include="clipper_library">
-     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\PackageCache\com.unity.cinemachine@2.8.6\Runtime\ThirdParty\clipper_library.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween">
-     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>D:\UnityHubEditor\2021.3.7f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -734,8 +734,14 @@
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Cinemachine">
+     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
      <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     </Reference>
+     <Reference Include="com.unity.cinemachine.editor">
+     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
      <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
@@ -751,12 +757,6 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-     </Reference>
-     <Reference Include="com.unity.cinemachine.editor">
-     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Cinemachine">
-     <HintPath>C:\Users\jhhtr\OneDrive\Masaüstü\SnowRaceClone\SnowRaceClone\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -1,41 +1,41 @@
 using System;
 using UnityEngine;
 using DG.Tweening;
+using Invector.vCharacterController;
 
 public class PlayerController : MonoBehaviour
 {
-    private RaycastHit raycastHit;
-    public GameObject snowBall;
-    private float rotateSpeed = 30;
-    private float snowBallScale;
-    private float reSnowBallScale =1.1f;
+    private SnowBallController snowBallController;
+    private vThirdPersonInput vThirdPersonInput;
+    public string aboveRoadCube;
 
-    void Start()
+    private void Start()
     {
-        
+        snowBallController = GameObject.Find("SnowBallCreateEmpty").GetComponent<SnowBallController>();
+        vThirdPersonInput = GetComponent<vThirdPersonInput>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        snowBallScale = snowBall.transform.localScale.x;
-        Debug.Log(snowBallScale);
-        IncreaseSnowBallScale();
-        
-
-    }
-
-    void IncreaseSnowBallScale()
-    {
-        if (snowBallScale < 1.5f)
+        if (transform.position.z >= vThirdPersonInput.reachMaxZ && !snowBallController.isActiveRoad)
         {
-            snowBall.transform.DOScale(new Vector3(reSnowBallScale,reSnowBallScale, reSnowBallScale), 3f);
-            reSnowBallScale += 0.1f;
-           
+            Debug.Log(vThirdPersonInput.reachMaxZ);
+            transform.position = new Vector3(transform.position.x,transform.position.y,vThirdPersonInput.reachMaxZ - 0.1f);
         }
-        else
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("RoadCube"))
         {
-            
+            snowBallController.isPlayerCollid = true;
+            aboveRoadCube = collision.gameObject.tag;
+        }
+
+        if (collision.gameObject.CompareTag("Cube"))
+        {
+            aboveRoadCube = collision.gameObject.tag;
+            snowBallController.isPlayerCollid = false;
         }
     }
 }
