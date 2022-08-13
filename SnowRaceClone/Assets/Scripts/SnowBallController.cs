@@ -5,6 +5,7 @@ using UnityEngine;
 using DG.Tweening;
 using Invector.vCharacterController;
 using Unity.VisualScripting;
+using UnityEngine.Animations;
 
 public class SnowBallController : MonoBehaviour
 {
@@ -12,15 +13,14 @@ public class SnowBallController : MonoBehaviour
 
     [SerializeField]  GameObject player;
     [SerializeField]  GameObject snowBall;
-    private Vector3 distanceBetweenPlayerandSnowBall;
-    private float momentScale;
-    private float startScale;
+    public float momentScale;
+    public float startScale;
     private vThirdPersonInput vThirdPersonInput;
-    private ArrayList roadCubes;
     private PlayerController playerController;
-    private ArrayList oldRoadCubes;
     public bool isPlayerCollid;
     public bool isActiveRoad = true;
+    private float decreaseValueAmount = 0.6f/4;
+    
     
 
     #endregion
@@ -29,25 +29,12 @@ public class SnowBallController : MonoBehaviour
     void Start()
     {
         vThirdPersonInput = GameObject.FindWithTag("Player").GetComponent<vThirdPersonInput>();
-        roadCubes = new ArrayList();
-        oldRoadCubes = new ArrayList();
         playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
-        AddRoadCubeInArray();
-        distanceBetweenPlayerandSnowBall = snowBall.transform.position - player.transform.position;
         StartCoroutine(SnowBallVisibilityRoutine());
         startScale = transform.localScale.x;
         isActiveRoad = true;
-        oldRoadCubes.Add(123341111);
     }
-
-    private void AddRoadCubeInArray()
-    {
-        foreach (var roadCube in GameObject.FindGameObjectsWithTag("RoadCube"))
-        {
-            roadCubes.Add(roadCube);
-        }
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -55,28 +42,18 @@ public class SnowBallController : MonoBehaviour
         
         if (momentScale >= startScale)
         {
-            
             if (isPlayerCollid == false && playerController.aboveRoadCube.Equals("Cube"))
             {
                 IncreaseSnowBallScale();
             }
         }
-
-        if(momentScale <= startScale)
-        {
-           
-            if (isPlayerCollid == true)
-            { 
-                decreaseSnowBallScale();
-            
-            }
-            
-        }
+        
     }
 
     private void LateUpdate()
     {
-        snowBall.transform.position = player.transform.position + distanceBetweenPlayerandSnowBall;
+        transform.eulerAngles = new Vector3(player.transform.eulerAngles.x, player.transform.eulerAngles.y,
+            player.transform.eulerAngles.z);
     }
 
     public IEnumerator SnowBallVisibilityRoutine()
@@ -95,37 +72,38 @@ public class SnowBallController : MonoBehaviour
             {
                 return;
             }
-            transform.DOScale(new Vector3(startScale,startScale,startScale), 1f);
-            
+            transform.DOScale(new Vector3(startScale,startScale,startScale), .4f);
+            if (ControlPassTheBridge().Equals("isActive is true"))
+            {
+                isActiveRoad = true;
+            }
         }
     }
 
-    public void decreaseSnowBallScale()
+    public void decreaseSnowBallScale(Collision collision)
     {
-        startScale -= 0.6f/4;
-            if (startScale <= 0.6f)
-            {
-                isActiveRoad = false;
-                return;
-            }
-           
-            isActiveRoad = true;
-            foreach (GameObject roadCube in roadCubes)
-            {
-                
-                foreach (float oldRoadCube in oldRoadCubes)
-                {
-                    if (roadCube.gameObject.GetInstanceID() != oldRoadCube)
-                    {
-                        transform.DOScale(new Vector3(startScale,startScale,startScale), .5f);
-                        oldRoadCubes.Add(roadCube.gameObject.GetInstanceID());
-                        return;
-                    }
-                 
-                }
-            }
-            
-            
+        ControlPassTheBridge();
+
+        isActiveRoad = true;
+        if (collision.gameObject.GetComponent<RoadCubeController>().isEnabledBoxCollider == false &&
+            collision.gameObject.GetComponent<RoadCubeController>().isSataration == false)
+        {
+            transform.DOScale(new Vector3(startScale, startScale, startScale), .5f);
+            collision.gameObject.GetComponent<RoadCubeController>().isSataration = true;
+        }
     }
-    
+
+    private String ControlPassTheBridge()
+    {
+        startScale -= decreaseValueAmount;
+        if (startScale <= 0.6f)
+        {
+            isActiveRoad = false;
+            return "isActive is false";
+        }
+        else
+        {
+            return "isActive is true";
+        }
+    }
 }

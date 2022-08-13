@@ -9,10 +9,11 @@ public class RoadCubeController : MonoBehaviour
     #region Variables
 
     private SnowBallController snowBallController;
-    private MeshRenderer roadCubeMeshRenderer;
+    public MeshRenderer roadCubeMeshRenderer;
     private GameObject snowBall;
     private PlayerController playerController;
     public bool isEnabledBoxCollider;
+    public bool isSataration = false;
     
 
     #endregion
@@ -21,7 +22,7 @@ public class RoadCubeController : MonoBehaviour
 
     void Start()
     {
-        snowBall = GameObject.Find("SnowBallCreateEmpty");
+        snowBall = GameObject.Find("Player/SnowBallCreateEmpty");
         snowBallController = snowBall.GetComponent<SnowBallController>();
         roadCubeMeshRenderer = GetComponent<MeshRenderer>();
         roadCubeMeshRenderer.enabled = false;
@@ -36,15 +37,20 @@ public class RoadCubeController : MonoBehaviour
         {
             if (snowBallController.isActiveRoad)
             {
+               
                 roadCubeMeshRenderer.enabled = true;
                 GetComponent<BoxCollider>().enabled = true;
                 isEnabledBoxCollider = true;
+               
             }
             else
             {
+               
+                Debug.Log("else");
                 if (roadCubeMeshRenderer.enabled == false)
                 {
-                    isEnabledBoxCollider = false;
+                    isEnabledBoxCollider = true;
+                    
                     GetComponent<BoxCollider>().enabled = false;
                 }
             }

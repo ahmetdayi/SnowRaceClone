@@ -8,19 +8,25 @@ public class PlayerController : MonoBehaviour
     private SnowBallController snowBallController;
     private vThirdPersonInput vThirdPersonInput;
     public string aboveRoadCube;
+    
 
     private void Start()
     {
-        snowBallController = GameObject.Find("SnowBallCreateEmpty").GetComponent<SnowBallController>();
+        snowBallController = GameObject.Find("Player/SnowBallCreateEmpty").GetComponent<SnowBallController>();
         vThirdPersonInput = GetComponent<vThirdPersonInput>();
     }
 
     private void Update()
     {
-        if (transform.position.z >= vThirdPersonInput.reachMaxZ && !snowBallController.isActiveRoad)
+        PlayerLastBorder();
+    }
+
+    private void PlayerLastBorder()
+    {
+        if (transform.position.z >= vThirdPersonInput.reachMaxZ && !snowBallController.isActiveRoad )
         {
-            Debug.Log(vThirdPersonInput.reachMaxZ);
-            transform.position = new Vector3(transform.position.x,transform.position.y,vThirdPersonInput.reachMaxZ - 0.1f);
+            transform.position =
+                new Vector3(transform.position.x, transform.position.y, vThirdPersonInput.reachMaxZ - 0.1f);
         }
     }
 
@@ -30,6 +36,7 @@ public class PlayerController : MonoBehaviour
         {
             snowBallController.isPlayerCollid = true;
             aboveRoadCube = collision.gameObject.tag;
+            snowBallController.decreaseSnowBallScale(collision);
         }
 
         if (collision.gameObject.CompareTag("Cube"))

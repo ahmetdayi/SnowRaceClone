@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 6406510}
   - component: {fileID: 6406509}
   m_Layer: 0
-  m_Name: Cube (8)
+  m_Name: Cube8
   m_TagString: RoadCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,12 +151,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6406507}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 2.37, z: 88.25}
+  m_LocalPosition: {x: -3.5, y: 2.37, z: 90.97}
   m_LocalScale: {x: 4.5, y: 0.1, z: 5.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2072243018}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6406509
 MonoBehaviour:
@@ -170,7 +170,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08b11a858401c541b10e0fedb598756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roadCubeMeshRenderer: {fileID: 0}
   isEnabledBoxCollider: 0
+  isEnter: 0
+  isSataration: 0
 --- !u!65 &6406510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -281,7 +284,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08b11a858401c541b10e0fedb598756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roadCubeMeshRenderer: {fileID: 0}
   isEnabledBoxCollider: 0
+  isEnter: 0
+  isSataration: 0
 --- !u!65 &12386013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -408,6 +414,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1925254437}
   snowBall: {fileID: 681359931}
+  momentScale: 0
+  startScale: 0
   isPlayerCollid: 0
   isActiveRoad: 0
 --- !u!4 &27272138
@@ -417,14 +425,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27272136}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.051, z: 1.13}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5410001, z: 0.99}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 681359936}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1925254443}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &27470595
 GameObject:
@@ -880,7 +888,7 @@ GameObject:
   - component: {fileID: 262730374}
   - component: {fileID: 262730373}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Cube6
   m_TagString: RoadCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -894,12 +902,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262730371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 2.37, z: 82.78}
+  m_LocalPosition: {x: -3.5, y: 2.37, z: 85.5}
   m_LocalScale: {x: 4.5, y: 0.1, z: 5.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2072243018}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &262730373
 MonoBehaviour:
@@ -913,7 +921,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08b11a858401c541b10e0fedb598756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roadCubeMeshRenderer: {fileID: 0}
   isEnabledBoxCollider: 0
+  isEnter: 0
+  isSataration: 0
 --- !u!65 &262730374
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1134,8 +1145,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522991738}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 16.94, y: 8.38, z: 13.3}
-  m_LocalScale: {x: 3.0642, y: 10.2160425, z: 0.1}
+  m_LocalPosition: {x: 17.09, y: 8.38, z: 19.95}
+  m_LocalScale: {x: 3.0642, y: 12.698541, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 574847435}
@@ -1557,7 +1568,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691980303}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: 8.38, z: -17.67}
+  m_LocalPosition: {x: 10, y: 8.38, z: -16.35}
   m_LocalScale: {x: 3.0642, y: 10.2160425, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1627,117 +1638,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691980303}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &696617175
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 696617176}
-  - component: {fileID: 696617180}
-  - component: {fileID: 696617179}
-  - component: {fileID: 696617178}
-  - component: {fileID: 696617177}
-  m_Layer: 0
-  m_Name: Cube (2)
-  m_TagString: RoadCube
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &696617176
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696617175}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 2.37, z: 23.73}
-  m_LocalScale: {x: 4.5, y: 0.1, z: 5.5}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2072243018}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &696617177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696617175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b08b11a858401c541b10e0fedb598756, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isEnabledBoxCollider: 0
---- !u!65 &696617178
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696617175}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &696617179
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696617175}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &696617180
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696617175}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2326,7 +2226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012634406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 35}
+  m_LocalPosition: {x: 0, y: 0, z: 36.32}
   m_LocalScale: {x: 20, y: 5, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2673,7 +2573,7 @@ GameObject:
   - component: {fileID: 1118356882}
   - component: {fileID: 1118356881}
   m_Layer: 0
-  m_Name: Cube (7)
+  m_Name: Cube7
   m_TagString: RoadCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2687,12 +2587,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118356879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 2.37, z: 93.72}
+  m_LocalPosition: {x: -3.5, y: 2.37, z: 96.49}
   m_LocalScale: {x: 4.5, y: 0.1, z: 5.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2072243018}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1118356881
 MonoBehaviour:
@@ -2706,7 +2606,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08b11a858401c541b10e0fedb598756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roadCubeMeshRenderer: {fileID: 0}
   isEnabledBoxCollider: 0
+  isEnter: 0
+  isSataration: 0
 --- !u!65 &1118356882
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2991,7 +2894,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319922410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 105}
+  m_LocalPosition: {x: 0, y: 0, z: 109.1}
   m_LocalScale: {x: 20, y: 5, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3248,7 +3151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556821318}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 10, y: 8.38, z: 15.6}
+  m_LocalPosition: {x: 10, y: 8.38, z: 18.320002}
   m_LocalScale: {x: 3.0642, y: 10.2160425, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3558,7 +3461,7 @@ GameObject:
   - component: {fileID: 1634816659}
   - component: {fileID: 1634816658}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Cube3
   m_TagString: RoadCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3572,12 +3475,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634816656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 2.37, z: 47.76}
+  m_LocalPosition: {x: -3.5, y: 2.37, z: 49.079998}
   m_LocalScale: {x: 4.5, y: 0.1, z: 5.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2072243018}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1634816658
 MonoBehaviour:
@@ -3591,7 +3494,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08b11a858401c541b10e0fedb598756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roadCubeMeshRenderer: {fileID: 0}
   isEnabledBoxCollider: 0
+  isEnter: 0
+  isSataration: 0
 --- !u!65 &1634816659
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3830,7 +3736,7 @@ GameObject:
   - component: {fileID: 1701934863}
   - component: {fileID: 1701934862}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Cube4
   m_TagString: RoadCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3844,12 +3750,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701934860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 2.37, z: 58.88}
+  m_LocalPosition: {x: -3.5, y: 2.37, z: 59.94}
   m_LocalScale: {x: 4.5, y: 0.1, z: 5.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2072243018}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1701934862
 MonoBehaviour:
@@ -3863,7 +3769,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08b11a858401c541b10e0fedb598756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roadCubeMeshRenderer: {fileID: 0}
   isEnabledBoxCollider: 0
+  isEnter: 0
+  isSataration: 0
 --- !u!65 &1701934863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4020,7 +3929,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784941295}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 16.91, y: 8.38, z: -20.17}
+  m_LocalPosition: {x: 16.91, y: 8.38, z: -18.85}
   m_LocalScale: {x: 3.0642, y: 10.2160425, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4104,7 +4013,7 @@ GameObject:
   - component: {fileID: 1796577695}
   - component: {fileID: 1796577694}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: Cube5
   m_TagString: RoadCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4118,12 +4027,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796577692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 2.37, z: 53.29}
+  m_LocalPosition: {x: -3.5, y: 2.37, z: 54.61}
   m_LocalScale: {x: 4.5, y: 0.1, z: 5.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2072243018}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1796577694
 MonoBehaviour:
@@ -4137,7 +4046,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08b11a858401c541b10e0fedb598756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roadCubeMeshRenderer: {fileID: 0}
   isEnabledBoxCollider: 0
+  isEnter: 0
+  isSataration: 0
 --- !u!65 &1796577695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4201,6 +4113,120 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796577692}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1803220059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1803220060}
+  - component: {fileID: 1803220064}
+  - component: {fileID: 1803220063}
+  - component: {fileID: 1803220062}
+  - component: {fileID: 1803220061}
+  m_Layer: 0
+  m_Name: Cube1 (1)
+  m_TagString: RoadCube
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1803220060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803220059}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.5, y: 2.37, z: 23.81}
+  m_LocalScale: {x: 4.5, y: 0.1, z: 5.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2072243018}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1803220061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803220059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b08b11a858401c541b10e0fedb598756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roadCubeMeshRenderer: {fileID: 0}
+  isEnabledBoxCollider: 0
+  isEnter: 0
+  isSataration: 0
+--- !u!65 &1803220062
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803220059}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1803220063
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803220059}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1803220064
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803220059}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1846010980
 GameObject:
   m_ObjectHideFlags: 0
@@ -4247,7 +4273,7 @@ GameObject:
   - component: {fileID: 1847278853}
   - component: {fileID: 1847278852}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Cube1
   m_TagString: RoadCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4280,7 +4306,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08b11a858401c541b10e0fedb598756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roadCubeMeshRenderer: {fileID: 0}
   isEnabledBoxCollider: 0
+  isEnter: 0
+  isSataration: 0
 --- !u!65 &1847278853
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4503,6 +4532,7 @@ Transform:
   - {fileID: 27470596}
   - {fileID: 1708729503}
   - {fileID: 1582343817}
+  - {fileID: 27272138}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4674,7 +4704,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998116828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 70}
+  m_LocalPosition: {x: 0, y: 0, z: 72.72}
   m_LocalScale: {x: 20, y: 5, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5121,13 +5151,13 @@ Transform:
   m_Children:
   - {fileID: 12386011}
   - {fileID: 1847278851}
-  - {fileID: 696617176}
   - {fileID: 1634816657}
   - {fileID: 1701934861}
   - {fileID: 1796577693}
   - {fileID: 262730372}
   - {fileID: 1118356880}
   - {fileID: 6406508}
+  - {fileID: 1803220060}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
